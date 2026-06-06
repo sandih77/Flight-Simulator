@@ -1,3 +1,7 @@
+# ==========================================
+# Projet C++ Général & Outils
+# ==========================================
+
 # Prerequisites
 *.d
 
@@ -23,7 +27,6 @@
 *.dll
 *.so.*
 
-
 # Fortran module files
 *.mod
 *.smod
@@ -39,7 +42,42 @@
 *.out
 *.app
 
-# Build directories
+# Temporary files
+*.tmp
+*.log
+*.bak
+*.swp
+
+# debug information files
+*.dwo
+
+# test output & cache
+Testing/
+.cache/
+
+
+# ==========================================
+# Spécifique à ton projet (build.sh & IDE)
+# ==========================================
+
+# L'exécutable généré par ton script build.sh
+flight_simulator
+
+# Le fichier texte temporaire généré par ton build.sh
+source.txt
+
+# Les fichiers générés par le MOC de Qt
+# (Indispensable pour éviter de polluer ton dépôt Git avec du code généré automatiquement)
+moc_*.cpp
+src/**/moc_*.cpp
+include/**/moc_*.cpp
+
+
+# ==========================================
+# Dossiers de Build & Configuration (CMake / IDE)
+# ==========================================
+
+# Dossiers de build classiques (si jamais tu repasses sur CMake ou Qt Creator un jour)
 build/
 Build/
 build-*/
@@ -52,18 +90,10 @@ Makefile
 install_manifest.txt
 compile_commands.json
 
-# Temporary files
-*.tmp
-*.log
-*.bak
-*.swp
-
 # vcpkg
 vcpkg_installed/
 
-# debug information files
-*.dwo
-
-# test output & cache
-Testing/
-.cache/
+# Éditeurs de texte (VS Code)
+# NOTE : On ignore .vscode pour ne pas partager tes chemins Debian locaux (/usr/include/qt6...) 
+# avec des collaborateurs qui seraient sous Windows ou Mac.
+.vscode/
