@@ -33,9 +33,12 @@ private:
     QPushButton *m_btnMoinsVx;
     QPushButton *m_btnPlusVy;
     QPushButton *m_btnMoinsVy;
+    QPushButton *m_btnPausePlay;
 
     QLabel *m_labelStats;
     QLabel *m_labelEtat;
+
+    bool m_isPaused = false;
 
     void mettreAJourLabels();
 };

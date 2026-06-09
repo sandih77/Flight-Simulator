@@ -39,6 +39,21 @@ MainWindow::MainWindow(const FlightSimulatorService &service, QWidget *parent)
     buttonsLayout->addWidget(m_btnMoinsVy);
     buttonsLayout->addWidget(m_btnPlusVy);
 
+    m_btnPausePlay = new QPushButton("Pause", this);
+    buttonsLayout->addWidget(m_btnPausePlay);
+
+    connect(m_btnPausePlay, &QPushButton::clicked, [this]()
+            {
+    m_isPaused = !m_isPaused;
+
+    if (m_isPaused) {
+        m_timer->stop();
+        m_btnPausePlay->setText("Play");
+    } else {
+        m_timer->start(16);
+        m_btnPausePlay->setText("Pause");
+    } });
+
     mainLayout->addLayout(buttonsLayout);
 
     connect(m_btnPlusVx, &QPushButton::clicked, [this]()
@@ -55,7 +70,7 @@ MainWindow::MainWindow(const FlightSimulatorService &service, QWidget *parent)
 
     m_timer = new QTimer(this);
     connect(m_timer, &QTimer::timeout, this, &MainWindow::loopSimulation);
-    m_timer->start(16); 
+    m_timer->start(16);
 }
 
 void MainWindow::loopSimulation()
