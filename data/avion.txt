@@ -1,8 +1,8 @@
 nom:TestAvionDeSandih
-vitesseX:1000.0
+vitesseX:900.0
 altitude:1000.0
-distance:70000.0
-vitesseY:1000.0
+distancePiste:7000.0
+vitesseY:0.0
 vitesseDecrochage:200.0
-gammaX:10.0
-gammaY:5.0
+gammaX:30.0
+gammaY:25.0

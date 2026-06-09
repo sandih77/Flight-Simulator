@@ -19,3 +19,12 @@
 - Button +Vitesse x et -Vitessex pour la simulation de la vitesse
 - Button +Vitesse y et -Vitessey pour la simulation de l' altitude
 - Seule la piste la condition de survie sinon crash
+  
+## View (Interface graphique)
+- Piste
+- Avion en deplacement vers le piste
+- une tableau de bord
+  - Vitesse de l avion suivant x
+  - Vitesse suivant y
+  - Altitude
+  - Distance par rapport à la piste
