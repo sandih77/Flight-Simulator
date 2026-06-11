@@ -11,7 +11,7 @@ int main(int argc, char* argv[]) {
     Avion avion1 = Avion::chargerDepuisFichier("data/avion.txt");
     std::cout << "Avion charge : " << avion1.getNom() << " | Vitesse decrochage: " << avion1.getVitesseDecrochage() << " km/h" << std::endl;
 
-    Piste pistePrincipale("Piste 09R", 1000.0f, 0.0f);
+    Piste pistePrincipale("Piste 09R", 5000.0f, 0.0f);
 
     FlightSimulatorService serviceVol(avion1, pistePrincipale);
 

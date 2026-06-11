@@ -28,3 +28,13 @@
   - Vitesse suivant y
   - Altitude
   - Distance par rapport à la piste
+
+
+## TEST
+- 10 s pause + screenshot
+- play
+- 20 s gammaY-
+- 30 s pause + screenshot
+
+## Suite
+- 00:05:00/Ax=-15/Ay=-3;00:05:00/Ax=-15/Ay=-3;00:05:00/Ax=-15/Ay=-3;

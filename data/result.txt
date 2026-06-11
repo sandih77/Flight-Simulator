@@ -1,0 +1,2 @@
+10.1279:TempsEcoulé| 360:VX| 0:VY| 5000:Altitude| -3987.14:DistancePiste| EN_VOL
+30.3045:TempsEcoulé| 360:VX| -19.3919:VY| 4905.99:Altitude| -1969.42:DistancePiste| EN_VOL

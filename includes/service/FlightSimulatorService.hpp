@@ -13,6 +13,7 @@ private:
     SimulationState m_etat;
     float m_accelerationX = 0.0f;
     float m_accelerationY = 0.0f;
+    float m_tempsEcoule = 0.0f;
 
 public:
     FlightSimulatorService(Avion avion, Piste piste);
@@ -31,4 +32,7 @@ public:
     const Piste &getPiste() const;
     SimulationState getEtat() const;
     bool estTermine() const;
+
+    float getTempsEcoule() const;
+    void reinitialiserChrono();
 };

@@ -4,7 +4,7 @@
 #include <QLabel>
 #include <QTimer>
 #include <QPaintEvent>
-#include "../../includes/service/FlightSimulatorService.hpp" // Ajuste le chemin selon ton projet
+#include "../../includes/service/FlightSimulatorService.hpp" 
 
 class MainWindow : public QWidget
 {
@@ -21,19 +21,18 @@ private slots:
     void loopSimulation();
 
 private:
-    // Service du simulateur
     FlightSimulatorService m_service;
 
-    // Timer pour la boucle graphique et physique (60 FPS -> ~16ms)
     QTimer *m_timer;
     const float m_deltaTime = 0.016f;
 
-    // Éléments de l'interface
     QPushButton *m_btnPlusVx;
     QPushButton *m_btnMoinsVx;
     QPushButton *m_btnPlusVy;
     QPushButton *m_btnMoinsVy;
     QPushButton *m_btnPausePlay;
+
+    QPushButton *m_btnScreenShot;
 
     QLabel *m_labelStats;
     QLabel *m_labelEtat;
@@ -41,4 +40,17 @@ private:
     bool m_isPaused = false;
 
     void mettreAJourLabels();
+    void ecrireDansFichier();
+    enum class VueCamera
+    {
+        DROITE,
+        GAUCHE,
+        DERRIERE
+    };
+
+    VueCamera m_vue = VueCamera::DROITE;
+
+    QPushButton *m_btnVueDroite = nullptr;
+    QPushButton *m_btnVueGauche = nullptr;
+    QPushButton *m_btnVueDerriere = nullptr;
 };
